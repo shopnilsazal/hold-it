@@ -1,4 +1,4 @@
-# hold-it
+# Hold It
 ### A quick and simple placeholder service.
 
 Built with Flask and Love.
