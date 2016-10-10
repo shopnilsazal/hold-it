@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Hold It | Placeholder Image Server {% endblock %}
+
+{% block content %}
+
+<h1 class="center logo">Hold It</h1>
+
+        <h5>A quick and simple placeholder service.</h5>
+        <p>To request a placeholder image of a given width and height
+            simply include an image with the source pointing to
+            <code>/&lt;width&gt;x&lt;height&gt;/</code>
+            on this server. You can also pass color and text such as:</p>
+        <pre>
+        &lt;img src="{{ url_for('generate_image_dimensions', dimensions='300x180', _external=True) }}" &gt;
+        &lt;img src="{{ url_for('generate_image_dimensions_color', dimensions='300x180', color='4a148c', _external=True) }}" &gt;
+        &lt;img src="{{ url_for('generate_image_dimensions_color_text', dimensions='300x180', color='e53935', text='Hello', _external=True) }}" &gt;
+        </pre>
+        <h2>Examples</h2>
+
+        <div class="row">
+            <div class="column">
+                <p class="info">Random Color</p>
+                <code>/300x180/</code>
+                <img src="{{ url_for('generate_image_dimensions', dimensions='300x180') }}">
+            </div>
+            <div class="column">
+                <p class="info">Fixed Color</p>
+                <code>/300x180/4a148c</code>
+                <img src="{{ url_for('generate_image_dimensions_color', dimensions='300x180', color='4a148c') }}">
+            </div>
+            <div class="column">
+                <p class="info">Fixed Color with Text</p>
+                <code>/300x180/e53935/Hello</code>
+                <img src="{{ url_for('generate_image_dimensions_color_text', dimensions='300x180', color='e53935', text='Hello') }}">
+            </div>
+        </div>
+
+{% endblock %}

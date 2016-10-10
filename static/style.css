@@ -1,0 +1,56 @@
+body {
+    background: #fff;
+    padding: 40px;
+    font-family: 'Inconsolata', "Helvetica Neue", sans-serif;
+}
+pre {
+    padding-top: 25px;
+}
+code {
+    border-radius: 0;
+    font-size: 95%;
+    margin: 0;
+    white-space: nowrap;
+    border-left: 2px solid #9b4dca;
+}
+
+.body:before, .body:after {
+    height: 40px;
+}
+
+.boxed {
+    background: #FFE2E2;
+    position: relative;
+    padding: 40px;
+}
+.boxed::before {
+    background: #FFE2E2;
+    content: '';
+    height: 90vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.center {
+    text-align: center;
+}
+.logo {
+    text-transform: uppercase;
+}
+h1, h2, h3 {
+    font-weight: 700;
+}
+.info {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.error {
+    padding-top: 100px;
+}
